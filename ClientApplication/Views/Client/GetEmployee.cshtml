@@ -2,6 +2,9 @@
 @model IEnumerable<Employee>
 @{
     ViewBag.Title = "GetContext";
+    List<SelectListItem> gender=new List<SelectListItem>();
+    gender.Add(new SelectListItem{Text="Male",Value="Male"});
+    gender.Add(new SelectListItem { Text = "Female", Value = "Female" });
 }
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
@@ -39,6 +42,10 @@
                     </td>
                     <td>
                         @Html.TextBoxFor(modelItem => item.Gender, new { id = "gender" + item.ID })
+                        
+                        @*@Html.DropDownListFor(modelItem => item.Gender, gender, "--select", new { id = "gender" + item.ID})*@
+                    
+
                     </td>
                     <td>
                         @Html.TextBoxFor(modelItem => item.City, new { id = "city" + item.ID })
@@ -67,31 +74,34 @@
         $lastName = $tr.find('#LastName');
         $gender = $tr.find('#gender');
         $city = $tr.find('#gender');
+        if (($firstname.val() != null && $firstname.val() != '') && ($lastName.val() != null && $lastName.val() != '')) {
+            Employee = { FirstName: $firstname.val(), LastName: $lastName.val(), City: $city.val(), Gender: $gender.val() };
+            $.ajax({
+                data: Employee,
+                dataType: 'json',
+                type: 'POST',
+                url: '@Url.Action("Create")',
+                success: function (response) {
 
-        Employee = { FirstName: $firstname.val(), LastName: $lastName.val(), City: $city.val(), Gender: $gender.val() };
-        $.ajax({
-            data: Employee,
-            dataType: 'json',
-            type: 'POST',
-            url: '@Url.Action("Create")',
-            success: function (response) {
+                    $this.id = $this.attr('id') + response.id;
+                    $firstname.id = $firstname.attr('id') + response.id;
+                    $lastName.id = $lastName.attr('id') + response.id;
+                    $gender.id = $gender.attr('id') + response.id;
+                    $city.id = $city.attr('id') + response.id;
 
-                $this.id = $this.attr('id') + response.id;
-                $firstname.id = $firstname.attr('id') + response.id;
-                $lastName.id = $lastName.attr('id') + response.id;
-                $gender.id = $gender.attr('id') + response.id;
-                $city.id = $city.attr('id') + response.id;
+                    $td.remove();
+                    var html = '<td><a href="/Client/Delete?id=' + response.id + '" id="Delete">Delete</a></td><td><a id="edit" data-assigned-id="' + response.id + '" onclick="EditEmployeedetail(this)">Update</a></td>';
+                    $(html).appendTo($tr);
+                    alert(response.responseText);
 
-                $td.remove();
-                var html = '<td><a href="/Client/Delete?id=' + response.id + '" id="Delete">Delete</a></td><td><a id="edit" data-assigned-id="' + response.id + '" onclick="EditEmployeedetail(this)">Update</a></td>';
-                $(html).appendTo($tr);
-                alert(response.responseText);
-
-            },
-            Error: function (response) {
-                alert("error!" + response.responseText);
-            }
-        });
+                },
+                Error: function (response) {
+                    alert("error!" + response.responseText);
+                }
+            });
+        }
+        else
+            alert("Please Fill First and Last Name.");
     });
 
     function AddNewRow() {
@@ -143,6 +153,7 @@
             }
             Employee = { FirstName: FirstName, LastName: LastName, City: City, Gender: Gender, ID: id };
         });
+
         $.ajax({
             data: Employee,
             dataType: 'json',
