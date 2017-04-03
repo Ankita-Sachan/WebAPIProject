@@ -1,0 +1,22 @@
+﻿@model EmployeeDataAccess.Employee
+@{
+    Layout = null;
+}
+
+<tr class="trEmployee">
+    <td>
+        @Html.TextBoxFor(modelitem => Model.FirstName, new { id = "FirstName"})
+    </td>
+    <td>
+        @Html.TextBoxFor(modelitem => Model.LastName, new { id = "LastName"})
+    </td>
+    <td>
+        @Html.TextBoxFor(modelitem => Model.Gender, new { id = "gender"})
+    </td>
+    <td>
+        @Html.TextBoxFor(modelitem => Model.City, new { id = "city"})
+    </td>
+    <td>
+        <a class="create" id="Create">Create</a>
+    </td>
+</tr>

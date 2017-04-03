@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmployeeDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegistrationID" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contacts">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EmailId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Phoneno" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Age" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sample.dbo.Employee' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="FirstName" MaxLength="50" Type="nvarchar" />
+    <Property Name="LastName" MaxLength="50" Type="nvarchar" />
+    <Property Name="Gender" MaxLength="50" Type="nvarchar" />
+    <Property Name="City" MaxLength="50" Type="nvarchar" />
+  </EntityType>
+  <Association Name="FK_dbo_Contacts_dbo_Clients_ClientID">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Contacts" Type="Self.Contacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Contacts">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EmployeeDataModelStoreContainer">
+    <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contacts" EntityType="Self.Contacts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Employee].[ID] AS [ID], 
+    [Employee].[FirstName] AS [FirstName], 
+    [Employee].[LastName] AS [LastName], 
+    [Employee].[Gender] AS [Gender], 
+    [Employee].[City] AS [City]
+    FROM [dbo].[Employee] AS [Employee]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_dbo_Contacts_dbo_Clients_ClientID" Association="Self.FK_dbo_Contacts_dbo_Clients_ClientID">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Contacts" EntitySet="Contacts" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

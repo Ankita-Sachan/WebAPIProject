@@ -1,0 +1,163 @@
+﻿@using EmployeeDataAccess;
+@model IEnumerable<Employee>
+@{
+    ViewBag.Title = "GetContext";
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<h2>Employee List</h2>
+<div id="empTable">
+    <p>
+        <input class="btn btn-primary" type="button" value="Add New Employee" id="addemployee" onclick="AddNewRow(this)">
+    </p>
+    <div class="table table-striped">
+        <table id="mytable">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gender)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.TextBoxFor(modelItem => item.FirstName, new { id = "FirstName" + item.ID })
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(modelItem => item.LastName, new { id = "LastName" + item.ID })
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(modelItem => item.Gender, new { id = "gender" + item.ID })
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(modelItem => item.City, new { id = "city" + item.ID })
+                    </td>
+                    <td>
+                        <a id="Delete" data-assigned-id="@item.ID" onclick="Delete(this)">Delete</a>
+                    </td>
+
+                    <td>
+                        <a id="edit" data-assigned-id="@item.ID" onclick="EditEmployeedetail(this)">Update</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).on('click', '#Create', function (event) {
+        var Employee;
+        debugger;
+        $this = $(this);
+        $tr = $this.closest('tr');
+        $td = $this.closest('td');
+
+        $firstname = $tr.find('#FirstName');
+        $lastName = $tr.find('#LastName');
+        $gender = $tr.find('#gender');
+        $city = $tr.find('#gender');
+
+        Employee = { FirstName: $firstname.val(), LastName: $lastName.val(), City: $city.val(), Gender: $gender.val() };
+        $.ajax({
+            data: Employee,
+            dataType: 'json',
+            type: 'POST',
+            url: '@Url.Action("Create")',
+            success: function (response) {
+
+                $this.id = $this.attr('id') + response.id;
+                $firstname.id = $firstname.attr('id') + response.id;
+                $lastName.id = $lastName.attr('id') + response.id;
+                $gender.id = $gender.attr('id') + response.id;
+                $city.id = $city.attr('id') + response.id;
+
+                $td.remove();
+                var html = '<td><a href="/Client/Delete?id=' + response.id + '" id="Delete">Delete</a></td><td><a id="edit" data-assigned-id="' + response.id + '" onclick="EditEmployeedetail(this)">Update</a></td>';
+                $(html).appendTo($tr);
+                alert(response.responseText);
+
+            },
+            Error: function (response) {
+                alert("error!" + response.responseText);
+            }
+        });
+    });
+
+    function AddNewRow() {
+        var url = '@Url.Action("NewEmployee", "Client")'; // adjust to suit
+        $.get(url, function (response1) {
+            debugger
+            $(response1).appendTo($("#mytable"))
+        });
+    }
+    function Delete(element) {
+        var sds = $(element).data('assigned-id');
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("Delete", "Client")',
+            contentType: "application/json; charset=utf-8",
+            data: { id: $(element).data('assigned-id') },
+            dataType: "json",
+            success: function (data) {
+                if (data == true) {
+                    $(element).closest('tr').remove();
+                    alert("Success");
+                }
+                else {
+                    alert("Error");
+                }
+            }
+        });
+    }
+    function EditEmployeedetail(elem) {
+        debugger
+        var id = $(elem).data('assigned-id');
+        var Employee;
+        var FirstName;
+        var LastName;
+        var City;
+        var Gender;
+        $("#mytable :text").each(function () {
+            if ($(this).attr('id') == "FirstName" + id) {
+                FirstName = $(this).val();
+            }
+            if ($(this).attr('id') == "LastName" + id) {
+                LastName = $(this).val();
+            }
+            if ($(this).attr('id') == "city" + id) {
+                City = $(this).val();
+            }
+            if ($(this).attr('id') == "gender" + id) {
+                Gender = $(this).val();
+            }
+            Employee = { FirstName: FirstName, LastName: LastName, City: City, Gender: Gender, ID: id };
+        });
+        $.ajax({
+            data: Employee,
+            dataType: 'json',
+            type: 'POST',
+            url: "@Url.Action("UpdateEmployeeData")",
+            success: function (response) {
+                if (response != null && response.success) {
+                    alert(response.responseText);
+                } else {
+                    alert(response.responseText);
+                }
+            },
+            error: function (response) {
+                alert("error!" + response.responseText);
+            }
+        });
+    }
+</script>
