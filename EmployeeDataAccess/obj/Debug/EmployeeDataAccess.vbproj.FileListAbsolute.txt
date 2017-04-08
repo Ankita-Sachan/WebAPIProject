@@ -11,3 +11,4 @@ D:\Project\WebAPIProject\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.vbproj.
 D:\Project\WebAPIProject\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.dll
 D:\Project\WebAPIProject\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.xml
 D:\Project\WebAPIProject\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.pdb
+D:\Project\WebAPIProject\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.vbprojResolveAssemblyReference.cache

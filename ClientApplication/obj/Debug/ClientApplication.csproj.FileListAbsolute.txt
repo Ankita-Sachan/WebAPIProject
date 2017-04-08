@@ -55,6 +55,6 @@ D:\Project\WebAPIProject\ClientApplication\bin\Microsoft.Owin.Security.OAuth.xml
 D:\Project\WebAPIProject\ClientApplication\bin\Microsoft.Owin.Security.Google.xml
 D:\Project\WebAPIProject\ClientApplication\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Project\WebAPIProject\ClientApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Project\WebAPIProject\ClientApplication\obj\Debug\ClientApplication.csprojResolveAssemblyReference.cache
 D:\Project\WebAPIProject\ClientApplication\obj\Debug\ClientApplication.dll
 D:\Project\WebAPIProject\ClientApplication\obj\Debug\ClientApplication.pdb
-D:\Project\WebAPIProject\ClientApplication\obj\Debug\ClientApplication.csprojResolveAssemblyReference.cache
