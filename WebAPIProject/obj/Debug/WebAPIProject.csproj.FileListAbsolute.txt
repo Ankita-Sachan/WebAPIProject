@@ -35,8 +35,7 @@ D:\Project\WebAPIProject\WebAPIProject\bin\System.Web.WebPages.Deployment.xml
 D:\Project\WebAPIProject\WebAPIProject\bin\System.Web.WebPages.Razor.xml
 D:\Project\WebAPIProject\WebAPIProject\bin\System.Web.Optimization.xml
 D:\Project\WebAPIProject\WebAPIProject\bin\Antlr3.Runtime.pdb
-D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.dll
-D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.pdb
-D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.csprojResolveAssemblyReference.cache
 D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.Migrations.init.resources
 D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.csproj.GenerateResource.Cache
+D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.dll
+D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.pdb

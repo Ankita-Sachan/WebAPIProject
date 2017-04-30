@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using EmployeeDataAccess;
+using ClientApplication.Models;
 using System.Web.Mvc;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;

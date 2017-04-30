@@ -2,7 +2,6 @@ D:\Project\WebAPIProject\ClientApplication\bin\ClientApplication.dll.config
 D:\Project\WebAPIProject\ClientApplication\bin\ClientApplication.dll
 D:\Project\WebAPIProject\ClientApplication\bin\ClientApplication.pdb
 D:\Project\WebAPIProject\ClientApplication\bin\Antlr3.Runtime.dll
-D:\Project\WebAPIProject\ClientApplication\bin\EmployeeDataAccess.dll
 D:\Project\WebAPIProject\ClientApplication\bin\EntityFramework.dll
 D:\Project\WebAPIProject\ClientApplication\bin\EntityFramework.SqlServer.dll
 D:\Project\WebAPIProject\ClientApplication\bin\Microsoft.AspNet.Identity.Core.dll
@@ -29,8 +28,6 @@ D:\Project\WebAPIProject\ClientApplication\bin\System.Web.WebPages.Deployment.dl
 D:\Project\WebAPIProject\ClientApplication\bin\System.Web.WebPages.dll
 D:\Project\WebAPIProject\ClientApplication\bin\System.Web.WebPages.Razor.dll
 D:\Project\WebAPIProject\ClientApplication\bin\WebGrease.dll
-D:\Project\WebAPIProject\ClientApplication\bin\EmployeeDataAccess.pdb
-D:\Project\WebAPIProject\ClientApplication\bin\EmployeeDataAccess.xml
 D:\Project\WebAPIProject\ClientApplication\bin\EntityFramework.xml
 D:\Project\WebAPIProject\ClientApplication\bin\EntityFramework.SqlServer.xml
 D:\Project\WebAPIProject\ClientApplication\bin\Newtonsoft.Json.xml
@@ -55,8 +52,7 @@ D:\Project\WebAPIProject\ClientApplication\bin\Microsoft.Owin.Security.OAuth.xml
 D:\Project\WebAPIProject\ClientApplication\bin\Microsoft.Owin.Security.Google.xml
 D:\Project\WebAPIProject\ClientApplication\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Project\WebAPIProject\ClientApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\Project\WebAPIProject\ClientApplication\obj\Debug\ClientApplication.csprojResolveAssemblyReference.cache
-D:\Project\WebAPIProject\ClientApplication\obj\Debug\ClientApplication.dll
-D:\Project\WebAPIProject\ClientApplication\obj\Debug\ClientApplication.pdb
 D:\Project\WebAPIProject\ClientApplication\obj\Debug\ClientApplication.Migrations.Initial.resources
 D:\Project\WebAPIProject\ClientApplication\obj\Debug\ClientApplication.csproj.GenerateResource.Cache
+D:\Project\WebAPIProject\ClientApplication\obj\Debug\ClientApplication.dll
+D:\Project\WebAPIProject\ClientApplication\obj\Debug\ClientApplication.pdb

@@ -6,7 +6,20 @@ EmployeeDataAccess
 </name>
 </assembly>
 <members>
-<member name="P:EmployeeDataAccess.Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets40892227753937d5e7fb0d7e871f5ba815b21151dc86b705438a3a6cbf0e1a90.MappingHashValue">
+<member name="P:EmployeeDataAccess.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:EmployeeDataAccess.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:EmployeeDataAccess.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:EmployeeDataAccess.Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets40892227753937d5e7fb0d7e871f5ba815b21151dc86b705438a3a6cbf0e1a90.MappingHashValue">
 	<summary>
  Gets a hash value computed over the mapping closure.
  </summary>
@@ -50,19 +63,6 @@ EmployeeDataAccess
 	<summary>
  Implements a mapping view cache.
  </summary>
-</member><member name="P:EmployeeDataAccess.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:EmployeeDataAccess.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:EmployeeDataAccess.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
 </member>
 </members>
 </doc>
