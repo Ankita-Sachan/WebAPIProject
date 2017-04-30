@@ -2,7 +2,6 @@ D:\Project\WebAPIProject\WebAPIProject\bin\WebAPIProject.dll.config
 D:\Project\WebAPIProject\WebAPIProject\bin\WebAPIProject.dll
 D:\Project\WebAPIProject\WebAPIProject\bin\WebAPIProject.pdb
 D:\Project\WebAPIProject\WebAPIProject\bin\Antlr3.Runtime.dll
-D:\Project\WebAPIProject\WebAPIProject\bin\EmployeeDataAccess.dll
 D:\Project\WebAPIProject\WebAPIProject\bin\EntityFramework.dll
 D:\Project\WebAPIProject\WebAPIProject\bin\EntityFramework.SqlServer.dll
 D:\Project\WebAPIProject\WebAPIProject\bin\Microsoft.Web.Infrastructure.dll
@@ -21,8 +20,6 @@ D:\Project\WebAPIProject\WebAPIProject\bin\System.Web.WebPages.dll
 D:\Project\WebAPIProject\WebAPIProject\bin\System.Web.WebPages.Razor.dll
 D:\Project\WebAPIProject\WebAPIProject\bin\WebApiContrib.dll
 D:\Project\WebAPIProject\WebAPIProject\bin\WebGrease.dll
-D:\Project\WebAPIProject\WebAPIProject\bin\EmployeeDataAccess.pdb
-D:\Project\WebAPIProject\WebAPIProject\bin\EmployeeDataAccess.xml
 D:\Project\WebAPIProject\WebAPIProject\bin\EntityFramework.xml
 D:\Project\WebAPIProject\WebAPIProject\bin\EntityFramework.SqlServer.xml
 D:\Project\WebAPIProject\WebAPIProject\bin\Newtonsoft.Json.xml
@@ -38,6 +35,8 @@ D:\Project\WebAPIProject\WebAPIProject\bin\System.Web.WebPages.Deployment.xml
 D:\Project\WebAPIProject\WebAPIProject\bin\System.Web.WebPages.Razor.xml
 D:\Project\WebAPIProject\WebAPIProject\bin\System.Web.Optimization.xml
 D:\Project\WebAPIProject\WebAPIProject\bin\Antlr3.Runtime.pdb
-D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.csprojResolveAssemblyReference.cache
 D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.dll
 D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.pdb
+D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.csprojResolveAssemblyReference.cache
+D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.Migrations.init.resources
+D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.csproj.GenerateResource.Cache

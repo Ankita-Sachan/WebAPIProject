@@ -92,6 +92,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataModel.Views.vb" />
     <Compile Include="Employee.vb">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>

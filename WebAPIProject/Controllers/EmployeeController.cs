@@ -4,8 +4,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using EmployeeDataAccess;
 using System.Web.Http.Cors;
+using WebAPIProject.Models;
 
 namespace WebAPIProject.Controllers
 {
@@ -15,13 +15,13 @@ namespace WebAPIProject.Controllers
         [HttpGet]
         public IEnumerable<Employee> Get()
         {
-            DataEntities entities = new DataEntities();
+            SampleContext entities = new SampleContext();
 return entities.Employees.ToList();
 
         }
         public HttpResponseMessage LoadAllEmployeWithId(int id)
         {
-            using (DataEntities entities = new DataEntities())
+            using (SampleContext entities = new SampleContext())
             {
                 var emp = entities.Employees.Where(x => x.ID == id).FirstOrDefault();
                 if (emp != null)
@@ -38,7 +38,7 @@ return entities.Employees.ToList();
 
         public HttpResponseMessage Put([FromBody] Employee emp, int id)
         {
-            using (DataEntities entities = new DataEntities())
+            using (SampleContext entities = new SampleContext())
             {
                 var employ = entities.Employees.Where(x => x.ID == id).FirstOrDefault();
                 if (employ != null)
@@ -60,7 +60,7 @@ return entities.Employees.ToList();
         {
             try
             {
-                using (DataEntities entities = new DataEntities())
+                using (SampleContext entities = new SampleContext())
                 {
                     entities.Employees.Add(emp);
                     entities.SaveChanges();
@@ -77,7 +77,7 @@ return entities.Employees.ToList();
 
         public HttpResponseMessage Delete(int id)
         {
-            using (DataEntities entities = new DataEntities())
+            using (SampleContext entities = new SampleContext())
             {
                 var emp = entities.Employees.FirstOrDefault(x => x.ID == id);
                 try

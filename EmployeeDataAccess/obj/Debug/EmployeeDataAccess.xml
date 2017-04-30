@@ -6,7 +6,51 @@ EmployeeDataAccess
 </name>
 </assembly>
 <members>
-<member name="P:EmployeeDataAccess.My.Resources.Resources.ResourceManager">
+<member name="P:EmployeeDataAccess.Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets40892227753937d5e7fb0d7e871f5ba815b21151dc86b705438a3a6cbf0e1a90.MappingHashValue">
+	<summary>
+ Gets a hash value computed over the mapping closure.
+ </summary>
+</member><member name="M:EmployeeDataAccess.Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets40892227753937d5e7fb0d7e871f5ba815b21151dc86b705438a3a6cbf0e1a90.GetView(System.Data.Entity.Core.Metadata.Edm.EntitySetBase)">
+	<summary>
+ Gets a view corresponding to the specified extent.
+ </summary>
+	<param name="extent">The extent.</param>
+	<returns>The mapping view, or null if the extent is not associated with a mapping view.</returns>
+</member><member name="M:EmployeeDataAccess.Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets40892227753937d5e7fb0d7e871f5ba815b21151dc86b705438a3a6cbf0e1a90.GetView0">
+	<summary>
+ Gets the view for DbModelStoreContainer.Clients.
+ </summary>
+	<returns>The mapping view.</returns>
+</member><member name="M:EmployeeDataAccess.Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets40892227753937d5e7fb0d7e871f5ba815b21151dc86b705438a3a6cbf0e1a90.GetView1">
+	<summary>
+ Gets the view for DbModelStoreContainer.Contacts.
+ </summary>
+	<returns>The mapping view.</returns>
+</member><member name="M:EmployeeDataAccess.Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets40892227753937d5e7fb0d7e871f5ba815b21151dc86b705438a3a6cbf0e1a90.GetView2">
+	<summary>
+ Gets the view for DataEntities.Clients.
+ </summary>
+	<returns>The mapping view.</returns>
+</member><member name="M:EmployeeDataAccess.Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets40892227753937d5e7fb0d7e871f5ba815b21151dc86b705438a3a6cbf0e1a90.GetView3">
+	<summary>
+ Gets the view for DataEntities.Contacts.
+ </summary>
+	<returns>The mapping view.</returns>
+</member><member name="M:EmployeeDataAccess.Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets40892227753937d5e7fb0d7e871f5ba815b21151dc86b705438a3a6cbf0e1a90.GetView4">
+	<summary>
+ Gets the view for DbModelStoreContainer.Employee.
+ </summary>
+	<returns>The mapping view.</returns>
+</member><member name="M:EmployeeDataAccess.Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets40892227753937d5e7fb0d7e871f5ba815b21151dc86b705438a3a6cbf0e1a90.GetView5">
+	<summary>
+ Gets the view for DataEntities.Employees.
+ </summary>
+	<returns>The mapping view.</returns>
+</member><member name="T:EmployeeDataAccess.Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets40892227753937d5e7fb0d7e871f5ba815b21151dc86b705438a3a6cbf0e1a90">
+	<summary>
+ Implements a mapping view cache.
+ </summary>
+</member><member name="P:EmployeeDataAccess.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
