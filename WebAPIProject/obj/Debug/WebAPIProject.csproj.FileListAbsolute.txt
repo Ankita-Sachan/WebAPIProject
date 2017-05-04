@@ -39,3 +39,4 @@ D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.Migrations.init.r
 D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.csproj.GenerateResource.Cache
 D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.dll
 D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.pdb
+D:\Project\WebAPIProject\WebAPIProject\obj\Debug\WebAPIProject.csprojResolveAssemblyReference.cache

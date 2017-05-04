@@ -56,3 +56,5 @@ D:\Project\WebAPIProject\ClientApplication\obj\Debug\ClientApplication.Migration
 D:\Project\WebAPIProject\ClientApplication\obj\Debug\ClientApplication.csproj.GenerateResource.Cache
 D:\Project\WebAPIProject\ClientApplication\obj\Debug\ClientApplication.dll
 D:\Project\WebAPIProject\ClientApplication\obj\Debug\ClientApplication.pdb
+D:\Project\WebAPIProject\ClientApplication\obj\Debug\ClientApplication.csprojResolveAssemblyReference.cache
+D:\Project\WebAPIProject\ClientApplication\obj\Debug\ClientApplication.Migrations.Init.resources
